@@ -1,0 +1,38 @@
+/*RESETEO:*/
+*{
+    margin:0;
+    padding:0;
+}
+
+
+/* SELECTOR DE ETIQUETA: */
+body{
+    background-color:aqua;
+}
+/* SELECTOR DE CLASE*/
+.contenedor{
+    width: 1200px;
+    background-color: white;
+    margin:0 auto;
+}
+span{
+    background-color:orange;
+}
+.rojo{
+    background-color: red;
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+/*SELECTOR DE IDENTIDAD*/
+#unico{
+    background-color:green;
+}
+
+.contenido{
+    border: 1px solid #000;
+}
+/*SELECTOR COMPUESTO */
+.contenido h2{
+    background-color:red;
+}
