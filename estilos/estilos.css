@@ -1,20 +1,96 @@
+:root{
+    /*ACÁ ESTEBLECEREMOS VARIABLES CON ALCANCE TOTAL*/
+    /*COLOR*/
+    --morado-profundo:#3913AB;
+    --celeste-cielo:#4445FA;
+    --amarillo-medio:#FFDA2B;
+    --beige:#FEFCF1;
+    --morado-claro:#EFE8FA;
+    /*ESPACIADORES*/
+    --padding-1:14px;
+    --padding-2:42px; /* 3 X PADDING-1*/
+    --gap-1:10px;
+
+}
+
 /*RESETEO:*/
 *{
     margin:0;
     padding:0;
+    box-sizing:border-box;
+
 }
 
 
 /* SELECTOR DE ETIQUETA: */
 body{
-    background-color:aqua;
+    background-color:var(--beige);
 }
 /* SELECTOR DE CLASE*/
 .contenedor{
-    width: 1200px;
+    width: 80%;
     background-color: white;
     margin:0 auto;
+    
 }
+/*HEADER */
+header{
+    display: flex;
+    justify-content:space-between;
+    background-color:var(--morado-profundo);
+    color:var(--morado-claro);
+    padding:var(--padding-1);
+}
+header h1 a{
+    color:var(--morado-claro);
+    text-decoration: none;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap:var(--gap-1);
+}
+header nav ul li a{
+    color: var(--morado-claro);
+    text-decoration: none;
+    display: block;
+    padding:var(--padding-1);
+    border-radius:4px;
+}
+header nav ul li a:hover{
+    background-color: var(--celeste-cielo);
+}
+
+/*FIN DEL HEADER */
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding:var(--padding-2) var(--padding-1);
+    background-color: var(--morado-claro);
+    color: var(--morado-profundo);
+}
+footer p a{
+    text-decoration: none;
+    color: var(--morado-profundo);
+}
+footer nav{}
+footer nav ul{
+    display: flex;
+    gap:var(--gap-1);
+    list-style: none;
+}
+footer nav ul li{}
+footer nav ul li a{
+    text-decoration: none;
+    color: var(--celeste-cielo);
+}
+
+/*FIN DEL FOOTER*/
+
+
 span{
     background-color:orange;
 }
@@ -30,9 +106,65 @@ span{
 }
 
 .contenido{
-    border: 1px solid #000;
+    border-top: 3px solid #f43;
+    border-bottom:10px double rgb(67, 200, 10);
+    border-radius:10px;
+    border-top-right-radius: 100px;
+    background-color: azure;
+    box-shadow:10px -10px 20px rgba(0, 0, 0,0.2);
+
+    
+    
+    /* LOS VALORES EN CSS PUEDEN SER RELATIVOS O ABSOLUTOS*/
+    width:600px;
+    height:auto;
+    margin:0 auto;
+    padding:40px;
+
 }
 /*SELECTOR COMPUESTO */
 .contenido h2{
     background-color:red;
+    margin-bottom: 20px;
 }
+.contenido p{
+    margin: 0 20px 20px 60px;
+}
+.contenido a{
+    background: grey;
+    display:block;
+    text-align:center;
+    border-radius:8px;
+    padding:12px 16px;
+    color:white;
+    text-decoration:none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: 250px;
+    margin:0 auto 20px auto;
+}
+/* PSEUDO CLASE: HOVER*/
+
+.contenido a:hover{
+    background-color:blue;
+}
+ .ejemplo{
+    padding: 10px;
+    border: 1px solid #000; 
+    display:flex;
+    justify-content:space-around;
+}
+ .ejemplo div{
+    flex-grow:1;
+    height: 100px;
+    background: purple;
+    border: 1px solid #1f0031;
+    color:white;
+    text-align: center;
+    padding-top:40px
+}
+.ejemplo div:nth-child(2){
+    flex-grow: 2;
+}
+
+
