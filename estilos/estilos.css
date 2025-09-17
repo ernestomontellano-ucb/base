@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root{
     /*ACÁ ESTEBLECEREMOS VARIABLES CON ALCANCE TOTAL*/
     /*COLOR*/
@@ -6,6 +9,20 @@
     --amarillo-medio:#FFDA2B;
     --beige:#FEFCF1;
     --morado-claro:#EFE8FA;
+    /*ESCALA TIPOGRÁFICA*/
+
+    --h1:48px;
+    --h2:40px;
+    --h3:33px;
+    --h4:28px;
+    --h5:23px;
+    --h6:19px;
+    --p:16px;
+    --sm:13px;
+    --xsm:11px;
+
+    --sans-serif: "Noto Sans", sans-serif;
+
     /*ESPACIADORES*/
     --padding-1:14px;
     --padding-2:42px; /* 3 X PADDING-1*/
@@ -23,9 +40,71 @@
 
 
 /* SELECTOR DE ETIQUETA: */
+
 body{
     background-color:var(--beige);
+    font-family: "Noto Sans", sans-serif;
 }
+h1{
+font-family: var(--sans-serif);
+font-size: var(--h1);
+font-weight: 700;
+}
+h2{
+font-family: var(--sans-serif);
+font-size: var(--h2);
+font-weight: 700;
+}
+h3{
+font-family: var(--sans-serif);
+font-size: var(--h3);
+font-weight: 700;
+}
+h4{
+font-family: var(--sans-serif);
+font-size: var(--h4);
+font-weight: 400;
+text-transform: uppercase;
+}
+h5{
+    font-family: var(--sans-serif);
+font-size: var(--h5);
+font-weight: 400;
+text-transform: uppercase;
+}
+h6{
+font-family: var(--sans-serif);
+font-size: var(--h6);
+font-weight: 400;
+text-transform: uppercase;
+}
+p{
+    font-family: var(--sans-serif);
+    font-size: var(--p);
+    font-weight: 400;
+}
+
+.sm{
+font-family: var(--sans-serif);
+font-size: var(--sm);
+font-weight: 400;
+text-transform: uppercase;
+
+}
+.xsm{
+    font-family: var(--sans-serif);
+font-size: var(--xsm);
+font-weight: 400;
+text-transform: uppercase;
+}
+.italic{
+font-style:italic;
+}
+.bold{
+font-weight: 700;
+}
+
+
 /* SELECTOR DE CLASE*/
 .contenedor{
     width: 80%;
@@ -100,10 +179,14 @@ span{
 .mayusculas{
     text-transform: uppercase;
 }
+/* FIN DEL FOOTER */
+
 /*SELECTOR DE IDENTIDAD*/
 #unico{
     background-color:green;
 }
+
+/* MODELO DE CAJA DENTRO DE IDEAS.HTML*/
 
 .contenido{
     border-top: 3px solid #f43;
@@ -167,4 +250,35 @@ span{
     flex-grow: 2;
 }
 
+/*INDEX.HTML*/
 
+/*HERO*/
+.hero{
+    position: relative;
+    /*
+STATIC
+RELATIVE
+ABSOLUTE (TIENE UNA RELACIÓN CON EL FLUJO NORMAL, SI SU PADRE ES DE POSICIÓN
+RELATIVA)
+FIXED
+
+TOP - LEFT - BOTTOM - RIGHT
+
+*/
+}
+
+.hero img{
+    display: block;
+    width: 100%;
+}
+.hero p{
+    width: 500px;
+    padding:var(--padding-1);
+    background-color:var(--morado-claro);
+    font-size:var(--h3);
+    position: absolute;
+    z-index: 9999;
+      
+    left:var(--padding-2);
+    bottom:var(--padding-2);
+}
